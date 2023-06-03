@@ -1,0 +1,8 @@
+- Setup dockerfile
+- Deploy the project in docker container
+- Host the project
+- Create a worker that pull questions from ChatGPT
+- Setup user management
+- Setup auth for web app
+- AUTH for API with API key
+- Apply UI template to web app
