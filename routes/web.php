@@ -23,5 +23,3 @@ Route::group([
 ], function () {
     Route::resource('question', 'QuestionController');;
 });
-
-//Route::get("question", "Controller@index");
