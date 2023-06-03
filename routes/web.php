@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Questions\QuestionController;
+//use App\Http\Controllers\Questions\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +21,5 @@ Route::get('/', function () {
 Route::group([
     'prefix' => 'questions',
 ], function () {
-    Route::resource('question', 'QuestionController');;
+    Route::resource('question', 'App\Http\Controllers\Questions\QuestionController');;
 });

@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="panel panel-default">
-  
+
         <div class="panel-heading clearfix">
 
             <div class="pull-left">
@@ -11,11 +11,11 @@
             </div>
             <div class="btn-group btn-group-sm pull-right" role="group">
 
-                <a href="{{ route('questions.question.index') }}" class="btn btn-primary" title="{{ trans('questions.show_all') }}">
+                <a href="{{ route('question.index') }}" class="btn btn-primary" title="{{ trans('questions.show_all') }}">
                     <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
                 </a>
 
-                <a href="{{ route('questions.question.create') }}" class="btn btn-success" title="{{ trans('questions.create') }}">
+                <a href="{{ route('question.create') }}" class="btn btn-success" title="{{ trans('questions.create') }}">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </a>
 
@@ -32,7 +32,7 @@
                 </ul>
             @endif
 
-            <form method="POST" action="{{ route('questions.question.update', $question->id) }}" id="edit_question_form" name="edit_question_form" accept-charset="UTF-8" class="form-horizontal">
+            <form method="POST" action="{{ route('question.update', $question->id) }}" id="edit_question_form" name="edit_question_form" accept-charset="UTF-8" class="form-horizontal">
             {{ csrf_field() }}
             <input name="_method" type="hidden" value="PUT">
             @include ('questions.questions.form', [

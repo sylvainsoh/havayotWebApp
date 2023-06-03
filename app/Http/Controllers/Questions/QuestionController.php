@@ -51,7 +51,7 @@ class QuestionController extends Controller
 
             Question::create($data);
 
-            return redirect()->route('questions.question.index')
+            return redirect()->route('question.index')
                 ->with('success_message', trans('questions.model_was_added'));
         } catch (Exception $exception) {
 
@@ -106,7 +106,7 @@ class QuestionController extends Controller
             $question = Question::findOrFail($id);
             $question->update($data);
 
-            return redirect()->route('questions.question.index')
+            return redirect()->route('question.index')
                 ->with('success_message', trans('questions.model_was_updated'));
         } catch (Exception $exception) {
 
@@ -120,7 +120,7 @@ class QuestionController extends Controller
      *
      * @param int $id
      *
-     * @return \Illuminate\Http\RedirectResponse | Redirector
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
@@ -128,7 +128,7 @@ class QuestionController extends Controller
             $question = Question::findOrFail($id);
             $question->delete();
 
-            return redirect()->route('questions.question.index')
+            return redirect()->route('question.index')
                 ->with('success_message', trans('questions.model_was_deleted'));
         } catch (Exception $exception) {
 

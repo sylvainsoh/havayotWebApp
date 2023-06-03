@@ -11,19 +11,19 @@
 
         <div class="pull-right">
 
-            <form method="POST" action="{!! route('questions.question.destroy', $question->id) !!}" accept-charset="UTF-8">
+            <form method="POST" action="{!! route('question.destroy', $question->id) !!}" accept-charset="UTF-8">
             <input name="_method" value="DELETE" type="hidden">
             {{ csrf_field() }}
                 <div class="btn-group btn-group-sm" role="group">
-                    <a href="{{ route('questions.question.index') }}" class="btn btn-primary" title="{{ trans('questions.show_all') }}">
+                    <a href="{{ route('question.index') }}" class="btn btn-primary" title="{{ trans('questions.show_all') }}">
                         <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
                     </a>
 
-                    <a href="{{ route('questions.question.create') }}" class="btn btn-success" title="{{ trans('questions.create') }}">
+                    <a href="{{ route('question.create') }}" class="btn btn-success" title="{{ trans('questions.create') }}">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </a>
-                    
-                    <a href="{{ route('questions.question.edit', $question->id ) }}" class="btn btn-primary" title="{{ trans('questions.edit') }}">
+
+                    <a href="{{ route('question.edit', $question->id ) }}" class="btn btn-primary" title="{{ trans('questions.edit') }}">
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                     </a>
 
